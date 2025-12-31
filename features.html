@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hydrogen Client - Features</title>
+<style>
+:root {
+    --primary: #2ecc71;
+    --primary-dark: #27ae60;
+    --bg: #0f0f0f;
+    --card: #1a1a1a;
+    --text: #ffffff;
+    --accent: #27ae60;
+    --shadow: rgba(0,0,0,0.7);
+}
+
+body {
+    background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text);
+    margin: 0;
+}
+
+header {
+    padding: 1rem 2rem;
+    background-color: var(--card);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 5px 15px var(--shadow);
+}
+
+header h1 {
+    color: var(--primary);
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+header nav a {
+    color: var(--text);
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: var(--primary);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 1rem;
+}
+
+h2 {
+    color: var(--primary);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+p.subtitle {
+    color: #bbb;
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    max-width: 700px;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    max-width: 1000px;
+}
+
+.feature {
+    background: var(--card);
+    padding: 2rem;
+    border-radius: 15px;
+    flex: 1 1 250px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.feature h3 {
+    color: var(--primary);
+    margin-bottom: 0.8rem;
+}
+
+.feature p {
+    color: #aaa;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.8rem;
+    color: #555;
+    background: var(--card);
+    border-top: 1px solid #333;
+}
+
+footer a {
+    color: var(--primary);
+    text-decoration: none;
+    margin: 0 0.5rem;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+    .features {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Hydrogen</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="features.html">Features</a>
+        <a href="https://github.com/Blue2SpookyTestingloll/Hydrogen-Client" target="_blank">GitHub</a>
+    </nav>
+</header>
+
+<main>
+    <h2>Hydrogen Client Features</h2>
+    <p class="subtitle">Hydrogen is a flexible Minecraft launcher designed to give players control, customization, and optimal performance. Here are some of its standout features:</p>
+
+    <div class="features">
+        <div class="feature">
+            <h3>Custom Main Menu</h3>
+            <p>Transform your launcher UI with the optional Hydrogen Branding Pack for a personalized and modern look.</p>
+        </div>
+        <div class="feature">
+            <h3>Mod Support</h3>
+            <p>Easily manage and play multiple Minecraft versions with full mod support via CMLLib integration.</p>
+        </div>
+        <div class="feature">
+            <h3>Lightweight & Fast</h3>
+            <p>Optimized launcher startup and minimal overhead ensure smoother performance across different hardware.</p>
+        </div>
+        <div class="feature">
+            <h3>Configurable Profiles</h3>
+            <p>Create and switch between multiple game profiles with different mods, settings, and versions.</p>
+        </div>
+        <div class="feature">
+            <h3>Secure Login</h3>
+            <p>Official Microsoft authentication flow keeps your account credentials safe and private.</p>
+        </div>
+        <div class="feature">
+            <h3>Open for Developers</h3>
+            <p>Inspect launcher behavior or contribute improvements via GitHub while keeping your sessions local.</p>
+        </div>
+    </div>
+</main>
+
+<footer>
+    V1.0.0 Stable | <a href="https://github.com/Blue2SpookyTestingloll/Hydrogen-Client" target="_blank">GitHub</a> | MIT License
+</footer>
+
+</body>
+</html>
