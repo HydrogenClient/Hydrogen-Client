@@ -6,70 +6,133 @@
     <title>Download Hydrogen Client</title>
     <style>
         :root {
-            --primary: #0078d7; /* Hydrogen Blue */
-            --bg: #121212;
-            --card: #1e1e1e;
+            --primary: #2ecc71; /* New Hydrogen Green */
+            --bg: #0f0f0f;
+            --card: #1a1a1a;
             --text: #ffffff;
+            --accent: #27ae60;
         }
 
         body {
             background-color: var(--bg);
             color: var(--text);
-            font-family: 'Segoe UI', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
+            padding: 20px;
         }
 
         .container {
             background: var(--card);
-            padding: 3rem;
-            border-radius: 15px;
+            padding: 2.5rem;
+            border-radius: 20px;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            max-width: 400px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.7);
+            max-width: 450px;
+            border: 1px solid #333;
         }
 
-        h1 { margin-bottom: 0.5rem; color: var(--primary); }
-        p { color: #aaa; margin-bottom: 2rem; }
+        .logo-placeholder {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            background: var(--primary);
+            border-radius: 50%; /* You can replace this with an <img> tag for your wave logo */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+        }
+
+        h1 { margin-bottom: 0.5rem; color: var(--primary); font-size: 2.5rem; }
+        p { color: #bbb; margin-bottom: 2rem; line-height: 1.5; }
+
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
 
         .download-btn {
             background-color: var(--primary);
-            color: white;
-            padding: 15px 30px;
+            color: #000;
+            padding: 16px 30px;
             text-decoration: none;
             font-weight: bold;
-            border-radius: 8px;
-            display: inline-block;
-            transition: transform 0.2s, background 0.2s;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+        }
+
+        .download-btn.secondary {
+            background-color: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
         }
 
         .download-btn:hover {
-            background-color: #005a9e;
-            transform: translateY(-2px);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(46, 204, 113, 0.3);
         }
 
+        .download-btn.secondary:hover {
+            background: var(--primary);
+            color: #000;
+        }
+
+        .instructions {
+            margin-top: 2rem;
+            text-align: left;
+            background: #111;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 0.85rem;
+            border-left: 4px solid var(--primary);
+        }
+
+        .instructions h3 { margin-top: 0; color: var(--primary); font-size: 1rem; }
+        .instructions ol { padding-left: 20px; color: #888; margin-bottom: 0; }
+
         .info {
-            margin-top: 1.5rem;
-            font-size: 0.8rem;
-            color: #555;
+            margin-top: 2rem;
+            font-size: 0.75rem;
+            color: #444;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
+        <div class="logo-placeholder">H</div>
         <h1>Hydrogen</h1>
-        <p>The next-gen Minecraft launcher. Faster, smoother, and Forge-ready.</p>
+        <p>The next-gen Minecraft launcher. Faster performance, better aesthetics.</p>
         
-        <a href="HydrogenClient.zip" class="download-btn" download>
-            Download for Windows
-        </a>
+        <div class="btn-group">
+            <a href="HydrogenClient.zip" class="download-btn" download>
+                Download Launcher (.exe)
+            </a>
+
+            <a href="HydrogenPack.zip" class="download-btn secondary" download>
+                Download Branding Pack (.zip)
+            </a>
+        </div>
+
+        <div class="instructions">
+            <h3>How to use the Branding Pack:</h3>
+            <ol>
+                <li>Download the <b>Branding Pack</b> ZIP.</li>
+                <li>Drop it into your <code>resourcepacks</code> folder.</li>
+                <li>Enable it in-game for the custom Hydrogen UI.</li>
+            </ol>
+        </div>
 
         <div class="info">
-            Version 1.0.0 | Requires WebView2 Runtime
+            V1.0.0 Stable | Powered by Hydrogen Engine
         </div>
     </div>
 
