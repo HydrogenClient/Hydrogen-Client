@@ -1,12 +1,20 @@
 # 🌊 Hydrogen Client
 
 ![Version](https://img.shields.io/badge/version-1.0.0-2ecc71?style=for-the-badge)
+![Minecraft](https://img.shields.io/badge/Supports-1.0_to_1.21.x-f1c40f?style=for-the-badge)
 ![Platform](https://img.shields.io/badge/platform-Windows-0078d7?style=for-the-badge)
-![Minecraft](https://img.shields.io/badge/Minecraft-1.21.x-f1c40f?style=for-the-badge)
 
-**Hydrogen** is a high-performance, next-generation Minecraft launcher built for speed and aesthetics. Say goodbye to bloated launchers and hello to a streamlined, Forge-ready experience.
+**Hydrogen** is a high-performance Minecraft launcher designed for the ultimate flexibility. Whether you are playing modern 1.21.x Forge mods or taking a nostalgic trip back to 1.0, Hydrogen handles it with speed and style.
 
-[Download Now](https://yourwebsite.com) | [Join Discord](https://discord.gg/yourlink)
+---
+
+## 🎮 Universal Compatibility
+
+Unlike other launchers that focus only on the latest releases, Hydrogen is built to be a "Legacy to Modern" bridge:
+
+* **Modern Era:** Full support for 1.21.x, including Forge and optimizations.
+* **Golden Age:** Perfect compatibility for 1.8.9 (PvP) and 1.12.2 (Modding).
+* **The Beginning:** Stable support for Minecraft 1.0 and classic versions.
 
 ---
 
@@ -68,4 +76,4 @@ We welcome developers! If you want to help improve Hydrogen:
 Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
-*Created with ❤️ by the Hydrogen Development Team*
+
