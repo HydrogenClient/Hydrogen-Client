@@ -1,142 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download Hydrogen Client</title>
-    <style>
-        :root {
-            --primary: #2ecc71; /* New Hydrogen Green */
-            --bg: #0f0f0f;
-            --card: #1a1a1a;
-            --text: #ffffff;
-            --accent: #27ae60;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Download Hydrogen Client</title>
+<style>
+    :root {
+        --primary: #2ecc71;
+        --primary-dark: #27ae60;
+        --bg: #0f0f0f;
+        --card: #1a1a1a;
+        --text: #ffffff;
+        --accent: #27ae60;
+        --shadow: rgba(0,0,0,0.7);
+    }
 
-        body {
-            background-color: var(--bg);
-            color: var(--text);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            padding: 20px;
-        }
+    * {
+        box-sizing: border-box;
+    }
 
+    body {
+        background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+        color: var(--text);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .container {
+        background: var(--card);
+        padding: 3rem 2rem;
+        border-radius: 25px;
+        text-align: center;
+        box-shadow: 0 20px 40px var(--shadow);
+        max-width: 500px;
+        border: 1px solid #333;
+        transition: transform 0.3s ease;
+    }
+
+    .container:hover {
+        transform: translateY(-5px);
+    }
+
+    .logo-placeholder {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto 1.5rem;
+        background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 50px;
+        font-weight: bold;
+        color: #000;
+        text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        box-shadow: 0 5px 15px var(--shadow);
+    }
+
+    h1 {
+        margin-bottom: 0.5rem;
+        color: var(--primary);
+        font-size: 2.8rem;
+        text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+    }
+
+    p {
+        color: #bbb;
+        margin-bottom: 2.5rem;
+        line-height: 1.6;
+        font-size: 1.05rem;
+    }
+
+    .btn-group {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .download-btn {
+        background: var(--primary);
+        color: #000;
+        padding: 16px 30px;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 14px;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(46,204,113,0.3);
+    }
+
+    .download-btn.secondary {
+        background: transparent;
+        color: var(--primary);
+        border: 2px solid var(--primary);
+        box-shadow: none;
+    }
+
+    .download-btn:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 20px rgba(46,204,113,0.4);
+    }
+
+    .download-btn.secondary:hover {
+        background: var(--primary);
+        color: #000;
+        box-shadow: 0 8px 20px rgba(46,204,113,0.4);
+    }
+
+    .instructions {
+        margin-top: 2.5rem;
+        text-align: left;
+        background: #111;
+        padding: 18px;
+        border-radius: 12px;
+        font-size: 0.9rem;
+        border-left: 5px solid var(--primary);
+        box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    }
+
+    .instructions h3 {
+        margin-top: 0;
+        color: var(--primary);
+        font-size: 1.05rem;
+    }
+
+    .instructions ol {
+        padding-left: 22px;
+        color: #aaa;
+        margin-bottom: 0;
+    }
+
+    .info {
+        margin-top: 2rem;
+        font-size: 0.8rem;
+        color: #555;
+        text-transform: uppercase;
+        letter-spacing: 1.2px;
+    }
+
+    @media (max-width: 480px) {
         .container {
-            background: var(--card);
-            padding: 2.5rem;
-            border-radius: 20px;
-            text-align: center;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.7);
-            max-width: 450px;
-            border: 1px solid #333;
+            padding: 2rem 1.5rem;
         }
-
+        h1 {
+            font-size: 2.2rem;
+        }
         .logo-placeholder {
             width: 80px;
             height: 80px;
-            margin: 0 auto 1.5rem;
-            background: var(--primary);
-            border-radius: 50%; /* You can replace this with an <img> tag for your wave logo */
-            display: flex;
-            align-items: center;
-            justify-content: center;
             font-size: 40px;
         }
-
-        h1 { margin-bottom: 0.5rem; color: var(--primary); font-size: 2.5rem; }
-        p { color: #bbb; margin-bottom: 2rem; line-height: 1.5; }
-
-        .btn-group {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .download-btn {
-            background-color: var(--primary);
-            color: #000;
-            padding: 16px 30px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 12px;
-            transition: all 0.3s ease;
-            font-size: 1.1rem;
-        }
-
-        .download-btn.secondary {
-            background-color: transparent;
-            color: var(--primary);
-            border: 2px solid var(--primary);
-        }
-
-        .download-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(46, 204, 113, 0.3);
-        }
-
-        .download-btn.secondary:hover {
-            background: var(--primary);
-            color: #000;
-        }
-
-        .instructions {
-            margin-top: 2rem;
-            text-align: left;
-            background: #111;
-            padding: 15px;
-            border-radius: 10px;
-            font-size: 0.85rem;
-            border-left: 4px solid var(--primary);
-        }
-
-        .instructions h3 { margin-top: 0; color: var(--primary); font-size: 1rem; }
-        .instructions ol { padding-left: 20px; color: #888; margin-bottom: 0; }
-
-        .info {
-            margin-top: 2rem;
-            font-size: 0.75rem;
-            color: #444;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-    </style>
+    }
+</style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="logo-placeholder">H</div>
-        <h1>Hydrogen</h1>
-        <p>The next-gen Minecraft launcher. Faster performance, better aesthetics.</p>
-        
-        <div class="btn-group">
-            <a href="HydrogenClient.zip" class="download-btn" download>
-                Download Launcher (.exe)
-            </a>
+<div class="container">
+    <div class="logo-placeholder">H</div>
+    <h1>Hydrogen</h1>
+    <p>The next-gen Minecraft launcher. Faster performance, better aesthetics.</p>
 
-            <a href="HydrogenPack.zip" class="download-btn secondary" download>
-                (Optional) Download Branding Pack (.zip)
-            </a>
-        </div>
-
-        <div class="instructions">
-            <h3>(Optional) How to use the Branding Pack:</h3>
-            <ol>
-                <li>Download the <b>Branding Pack</b> ZIP.</li>
-                <li>Drop it into your <code>resourcepacks</code> folder.</li>
-                <li>Enable it in-game for the custom Hydrogen UI.</li>
-            </ol>
-        </div>
-
-        <div class="info">
-            V1.0.0 Stable | Powered by Hydrogen Engine
-        </div>
+    <div class="btn-group">
+        <a href="HydrogenClient.zip" class="download-btn" download>
+            Download Launcher (.exe)
+        </a>
+        <a href="HydrogenPack.zip" class="download-btn secondary" download>
+            (Optional) Download Branding Pack (.zip)
+        </a>
     </div>
+
+    <div class="instructions">
+        <h3>(Optional) How to use the Branding Pack:</h3>
+        <ol>
+            <li>Download the <b>Branding Pack</b> ZIP.</li>
+            <li>Drop it into your <code>resourcepacks</code> folder.</li>
+            <li>Enable it in-game for the custom Hydrogen UI.</li>
+        </ol>
+    </div>
+
+    <div class="info">
+        V1.0.0 Stable | Powered by Hydrogen Engine
+    </div>
+</div>
 
 </body>
 </html>
-
-
