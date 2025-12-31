@@ -38,7 +38,7 @@ Unlike other launchers that focus only on the latest releases, Hydrogen is built
 ### Custom Branding (Optional)
 To get the full Hydrogen look:
 1. Download the `HydrogenPack.zip`.
-2. Move it to your `%appdata%/.minecraft/resourcepacks` folder.
+2. Move it to your `C:\HydrogenClient\Minecraft\resourcepacks` folder.
 3. Activate it in the Minecraft "Resource Packs" menu.
 
 ---
@@ -76,5 +76,6 @@ We welcome developers! If you want to help improve Hydrogen:
 Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
+
 
 
