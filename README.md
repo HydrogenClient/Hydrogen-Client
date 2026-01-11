@@ -31,7 +31,7 @@ Unlike other launchers that focus only on the latest releases, Hydrogen is built
 ## 🚀 Getting Started
 
 ### Installation
-1. Download the latest **HydrogenClient.zip** from our [Releases](https://github.com/yourusername/Hydrogen-Client/releases) page.
+1. Download the latest **HydrogenClient.zip** from our [Releases](https://github.com/HydrogenClient/Hydrogen-Client/releases) page.
 2. Extract the folder to your desired location.
 3. Run `Setup.exe`.
 
@@ -76,6 +76,7 @@ We welcome developers! If you want to help improve Hydrogen:
 Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
+
 
 
 
